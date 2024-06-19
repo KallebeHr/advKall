@@ -17,19 +17,17 @@
   </header>
   <v-navigation-drawer v-model="drawer" location="right" temporary class="menuH">
     <v-card class="headerMenu">
-      <title>Menu</title>
       <v-container class="test">
-        <div>
-          <v-btn class="bnt-menu" outlined>
-             Rifas
-          </v-btn>
-          <v-btn class="bnt-menu">
-             Times e Apostas
-          </v-btn>
-          <v-btn class="bnt-menu">
-             Apostas Ativas
-          </v-btn>
-
+        <div class="Hnav">         
+      <ul class="header-nav">
+        <li>Home</li>
+        <li>Sobre nós</li>
+        <li>Áreas de Atuação</li>
+        <li>Artigos</li>
+        <li>Equipe</li>
+        <li>Contato</li>
+      </ul>
+      <p>Entrar em contato</p>
         </div>
       </v-container>
     </v-card>
@@ -146,6 +144,52 @@ watch(() => window.innerWidth, () => {
       margin:10px;
       height: 100%;
       font-size:1rem;
+  }
+  .menuH{
+
+  }
+  .headerMenu{
+    display:flex;
+    justify-content: center;
+    height: 100%;
+
+  }
+  .Hnav{
+    display:flex;
+    justify-content: space-between;
+    height: 100%;
+    flex-direction: column;
+
+
+  }
+  .Hnav p{ 
+    font-size: 1rem;
+    background: #d8d8d8;
+    letter-spacing: 3px;
+    font-weight: 900;
+    color: #636363;
+    margin:10px;
+    padding:10px;
+    border-radius:10px;
+    text-align: center;
+    cursor:pointer;
+  }
+  .header-nav{
+    list-style: none;
+    margin-top:1rem;
+  }
+  .header-nav li{
+
+    font-size: 1rem;
+    color: #d8d8d8;
+    letter-spacing: 3px;
+    font-weight: 900;
+    background: #636363;
+    margin:10px;
+    padding:10px;
+    border-radius:10px;
+    text-align: center;
+    cursor:pointer;
   }
   .icon{
       cursor:pointer;
