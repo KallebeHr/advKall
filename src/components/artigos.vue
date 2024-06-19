@@ -37,11 +37,11 @@ import 'swiper/css/navigation'
 
 // Defina os slides com imagens e títulos
 const slides = ref([
-  { img: '/public/IMG/1c.png', title: 'Direito Empresarial' },
-  { img: '/public/IMG/1c.png', title: 'Direito de Família' },
-  { img: '/public/IMG/1c.png', title: 'Direito Penal' },
-  { img: '/public/IMG/1c.png', title: 'ações revisionais' },
-  { img: '/public/IMG/1c.png', title: 'pareceres jurídicos.' },
+  { img: './IMG/1c.png', title: 'Direito Empresarial' },
+  { img: './IMG/1c.png', title: 'Direito de Família' },
+  { img: './IMG/1c.png', title: 'Direito Penal' },
+  { img: './IMG/1c.png', title: 'ações revisionais' },
+  { img: './IMG/1c.png', title: 'pareceres jurídicos.' },
 ])
 
 const swiperRef = ref(null)

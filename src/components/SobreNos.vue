@@ -143,7 +143,7 @@ export default {
 }
 .texto .text-p{
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(20px);
     transition: opacity 0.5s ease-out, transform .5s ease-out;
   margin:10px;
 
@@ -159,7 +159,7 @@ export default {
     text-transform: none;
     color: #2c2c2c;
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-20px);
     transition: opacity 0.5s ease-out, transform .5s ease-out;
 
 }
@@ -174,7 +174,7 @@ export default {
     height: .6rem;
     border-radius:20px;
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-20px);
     transition: opacity 0.5s ease-out, transform .5s ease-out;
 }
 .linha.show{

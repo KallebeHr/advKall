@@ -1,9 +1,9 @@
 <template>
   <v-app>
-    <v-main>
+    <v-main class="teste">
       <NavBar />
       <Home />
-      <!-- <SobreNos /> -->
+      <SobreNos />
       <atuacao />
       <artigos />
     </v-main>
@@ -12,4 +12,12 @@
 
 <script setup>
   //
+
 </script>
+
+<style scoped>
+  .teste{
+  width:100%;
+
+  }
+</style>

@@ -140,7 +140,7 @@ export default {
   border-radius: 5px;
   width: 100%;
   opacity: 0;
-  transform: translateX(-100px);
+  transform: translateX(-20px);
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 .line2 {
@@ -152,7 +152,7 @@ export default {
   border-radius: 5px;
   width: 100%;
   opacity: 0;
-  transform: translateX(100px);
+  transform: translateX(20px);
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
@@ -167,7 +167,7 @@ export default {
   font-weight: 900;
   white-space: nowrap;
   opacity: 0;
-  transform: translateY(100px);
+  transform: translateY(20px);
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
@@ -192,7 +192,7 @@ export default {
   border: 1px solid transparent;
   margin: 10px;
   opacity: 0;
-  transform: translateX(-100px);
+  transform: translateX(-20px);
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 .card3, .card4 {
@@ -203,7 +203,7 @@ export default {
   border: 1px solid transparent;
   margin: 10px;
   opacity: 0;
-  transform: translateX(100px);
+  transform: translateX(20px);
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 .card1.show, .card2.show, .card3.show, .card4.show  {
