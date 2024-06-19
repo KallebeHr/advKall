@@ -7,7 +7,7 @@
     <div class="carr">
       <swiper
         :modules="modules"
-        :slidesPerView="isMobile ? 1.4 : 2"
+        :slidesPerView="isMobile ? 1.4 : 2.2"
         :centeredSlides="true"
         :navigation="true"
         class="mySwiper"

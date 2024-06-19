@@ -9,7 +9,6 @@
         <li>Artigos</li>
         <li>Equipe</li>
         <li>Contato</li>
-        
       </ul>
       <v-icon @click.stop="toggleDrawer" v-if="isMobile" style="cursor: pointer;color:black; margin-right:10px;"
           icon="mdi-menu" />
@@ -165,7 +164,7 @@ watch(() => window.innerWidth, () => {
   .Hnav p{ 
     font-size: 1rem;
     background: #d8d8d8;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     font-weight: 900;
     color: #636363;
     margin:10px;
@@ -182,7 +181,7 @@ watch(() => window.innerWidth, () => {
 
     font-size: 1rem;
     color: #d8d8d8;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     font-weight: 900;
     background: #636363;
     margin:10px;
