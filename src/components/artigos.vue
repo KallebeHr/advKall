@@ -7,7 +7,7 @@
     <div class="carr">
       <swiper
         :modules="modules"
-        :slidesPerView="1"
+        :slidesPerView="isMobile ? 1.4 : 2"
         :centeredSlides="true"
         :navigation="true"
         class="mySwiper"
@@ -22,7 +22,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onBeforeUnmount, watch } from 'vue'
 import SvgIcon from '@jamescoyle/vue-icon'
 import { mdiInstagram } from '@mdi/js'
 import { Swiper, SwiperSlide } from 'swiper/vue'
@@ -55,58 +55,75 @@ const pagination = {
 }
 
 const modules = [Pagination, Navigation]
-</script>
-<style scoped>
 
-.container{
-    display:flex;
-    justify-content: center;
-    height: auto;
-    background: #fffbff;
-    flex-direction: column;
-
+const isMobile = ref(false)
+const handleWindowSizeChange = () => {
+  isMobile.value = window.innerWidth <= 600
 }
-.slide-image{
-  width:15rem;
+
+onMounted(() => {
+  handleWindowSizeChange()
+  window.addEventListener('resize', handleWindowSizeChange)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', handleWindowSizeChange)
+})
+
+watch(() => window.innerWidth, () => {
+  handleWindowSizeChange()
+})
+</script>
+
+<style scoped>
+.container {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  background: #fffbff;
+  flex-direction: column;
+}
+.slide-image {
+  width: 15rem;
   height: 15rem;
-  border-radius:10px;
+  border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 .mySwiper {
-  margin-top:1rem;
+  margin-top: 1rem;
   width: 100%;
   height: 30rem;
   color: black;
   margin-bottom: 1rem;
 }
-.card-text{
-  display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.card-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.card-text p{
-  margin-top:1rem;
+.card-text p {
+  margin-top: 1rem;
   font-size: 1rem;
   color: #c2c2c2;
   letter-spacing: 5px;
   font-weight: 900;
 }
-.titulo{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top:4rem;
-    color:black;
+.titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 4rem;
+  color: black;
 }
-.icon{
-    width: 5rem;
-    height: 5rem;
+.icon {
+  width: 5rem;
+  height: 5rem;
   color: #c2c2c2;
 }
-.titulo h1{
-    font-size: 2.5rem;
+.titulo h1 {
+  font-size: 2.5rem;
   color: #c2c2c2;
   letter-spacing: 5px;
   font-weight: 900;

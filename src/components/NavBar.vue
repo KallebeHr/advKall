@@ -61,11 +61,11 @@
    
   
   const path = ref()
-  const isMobile = ref(false);
   const drawer = ref(false);
   const toggleDrawer = () => {
-  drawer.value = !drawer.value;
-};
+    drawer.value = !drawer.value;
+  };
+  const isMobile = ref(false);
 const handleWindowSizeChange = () => {
   isMobile.value = window.innerWidth <= 1030;
 };
