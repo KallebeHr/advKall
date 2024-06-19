@@ -12,6 +12,7 @@
     "@mdi/font": "7.0.96",
     "@mdi/js": "^7.4.47",
     "core-js": "^3.34.0",
+    "leaflet": "^1.9.4",
     "roboto-fontface": "*",
     "swiper": "^11.1.4",
     "vue": "^3.4.0",

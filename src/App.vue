@@ -6,6 +6,7 @@
       <SobreNos />
       <atuacao />
       <artigos />
+      <contatos />
     </v-main>
   </v-app>
 </template>
