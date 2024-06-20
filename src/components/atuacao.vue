@@ -6,77 +6,21 @@
       <div class="line2"></div>
     </div>
     <div class="cards">
-      <div class="card1">
-        <div class="image"></div>
-        <div class="content">
-          <a href="#">
-            <span class="title">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </span>
-          </a>
-          <p class="desc">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
-            dolores, possimus pariatur animi temporibus nesciunt praesentium 
-          </p>
-
-          <a class="action" href="#">
-            ENTRE EM CONTATO
-            <span aria-hidden="true">→</span>
-          </a>
+      <div class="card1 card" v-for="(card, index) in cards" :key="card.id" :class="'card' + (index + 1)">
+        <div class="image">
+          <img :src="card.image" alt="Imagem da área de atuação" v-if="card.image">
         </div>
-      </div>
-      <div class="card2">
-        <div class="image"></div>
         <div class="content">
-          <a href="#">
+          <a :href="card.link">
             <span class="title">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              {{ card.title }}
             </span>
           </a>
           <p class="desc">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
-            dolores, possimus pariatur animi temporibus nesciunt praesentium 
+            {{ card.description }}
           </p>
 
-          <a class="action" href="#">
-            ENTRE EM CONTATO
-            <span aria-hidden="true">→</span>
-          </a>
-        </div>
-      </div>
-      <div class="card3">
-        <div class="image"></div>
-        <div class="content">
-          <a href="#">
-            <span class="title">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </span>
-          </a>
-          <p class="desc">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
-            dolores, possimus pariatur animi temporibus nesciunt praesentium 
-          </p>
-
-          <a class="action" href="#">
-            ENTRE EM CONTATO
-            <span aria-hidden="true">→</span>
-          </a>
-        </div>
-      </div>
-      <div class="card4">
-        <div class="image"></div>
-        <div class="content">
-          <a href="#">
-            <span class="title">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </span>
-          </a>
-          <p class="desc">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
-            dolores, possimus pariatur animi temporibus nesciunt praesentium 
-          </p>
-
-          <a class="action" href="#">
+          <a class="action" :href="card.contactLink">
             ENTRE EM CONTATO
             <span aria-hidden="true">→</span>
           </a>
@@ -88,6 +32,45 @@
 
 <script>
 export default {
+  data() {
+    return {
+      cards: [
+        {
+          id: 1,
+          title: "Direito Civil",
+          description: "Contratos, responsabilidade civil, direitos do consumidor, indenizações.",
+          link: "#",
+          contactLink: "#",
+          image: "link-para-imagem-civil.jpg"
+        },
+        {
+          id: 2,
+          title: "Direito Empresarial",
+          description: "Consultoria empresarial, constituição de empresas, fusões e aquisições, recuperação judicial.",
+          link: "#",
+          contactLink: "#",
+          image: "link-para-imagem-empresarial.jpg"
+        },
+        {
+          id: 3,
+          title: "Direito de Família",
+          description: "Divórcios, guarda e regulamentação de visitas, pensão alimentícia, partilha de bens.",
+          link: "#",
+          contactLink: "#",
+          image: "link-para-imagem-familia.jpg"
+        },
+        {
+          id: 4,
+          title: "Direito Sucessório",
+          description: "Testamentos, inventários, partilhas, planejamento sucessório.",
+          link: "#",
+          contactLink: "#",
+          image: "link-para-imagem-sucessorio.jpg"
+        },
+        
+      ]
+    };
+  },
   mounted() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -102,7 +85,7 @@ export default {
     document.querySelectorAll('.line1, .line2, .name').forEach(element => {
       observer.observe(element);
     });
-    document.querySelectorAll('.card1, .card2, .card3, .card4').forEach(element => {
+    document.querySelectorAll('.card1, .card2, .card3, .card4, .card5').forEach(element => {
       observer.observe(element);
     });
   }
@@ -206,6 +189,8 @@ export default {
   transform: translateX(20px);
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
+.card1:hover ,.card2:hover,.card3:hover,.card4:hover{
+} 
 .card1.show, .card2.show, .card3.show, .card4.show  {
   opacity: 1;
   transform: translateY(0);

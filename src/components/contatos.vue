@@ -1,98 +1,124 @@
 <template>
-  <div class="container">
-    
-    <div class="form">
-
+    <div class="container">
+      <div class="card">
+        <h1>Estamos disponíveis para ajudar.</h1>
+  
+        <div class="inputsP">
+          <div class="inputsT">
+            <v-text-field class="name" label="Nome"></v-text-field>
+            <v-text-field class="tell" label="Celular"></v-text-field>
+          
+          </div>
+          <div class="inputsT">
+            <v-select
+  label="Ajuda com"
+  class="help"
+  :items="['Direito Civil', 'Direito Empresarial', 'Direito de Família', 'Direito Sucessório']"
+></v-select>
+            <v-text-field class="email" label="Email"></v-text-field>
+          </div>
+        </div>
+        <v-textarea
+        class="message"
+      label="Mensagem"
+      counter
+    ></v-textarea>
+  
+        <v-btn class="submit-btn" color="primary">Enviar</v-btn>
+      </div>
     </div>
-    <div class="local">
-        <h1>Nossa localização é</h1>
-        <p>Pedro II - Piaui</p>
-        <p>Rua Exemplo Do Nome Da Rua, 213 ,Quadra 12</p>
-        <div id="map"></div>
-
-    </div>
-
-  </div>
-</template>
-
-<script>
-import L from 'leaflet';
-
-export default {
-  name: 'MapComponent',
-  mounted() {
-    // Criar o mapa
-    const map = L.map('map').setView([-4.436539961556317, -41.45541510291524], 13);
-
-    // Adicionar a camada de tiles
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-
-    // Adicionar um marcador
-    const marker = L.marker([-4.436539961556317, -41.45541510291524]).addTo(map);
-    marker.bindPopup("<b>Olá!</b><br>aqui é a praça.").openPopup();
-
-    // Adicionar um círculo
-    const circle = L.circle([-4.436747825229075, -41.454312439158386], {
-      color: 'red',
-      fillColor: '#f03',
-      fillOpacity: 0.5,
-      radius: 10
-    }).addTo(map);
-    circle.bindPopup("Uma referencia marcada.");
-
-    // // Adicionar um polígono
-    // const polygon = L.polygon([
-    //   [51.509, -0.08],
-    //   [51.503, -0.06],
-    //   [51.51, -0.047]
-    // ]).addTo(map);
-    // polygon.bindPopup("I am a polygon.");
-
-    // Evento de clique no mapa
-    const popup = L.popup();
-
-    function onMapClick(e) {
-      popup
-        .setLatLng(e.latlng)
-        .setContent("Vocé clicou em " + e.latlng.toString())
-        .openOn(map);
-    }
-
-    map.on('click', onMapClick);
+  </template>
+  
+  <script>
+  export default {
+ 
+  
   }
-};
-</script>
-
-<style scoepd>
-.container{
-  display: flex;
-  justify-content: center;
-  height: auto;
-  background: #fffbff;
-  flex-direction: column;
-}
-.local{
+  </script>
+  
+  <style scoped>
+  .container {
     display: flex;
-    text-align: center;
     justify-content: center;
+    height: auto;
+    width: 100%;
+    background: #fffbff;
+    color: black;
+    padding: 2rem;
+  }
+  
+  .card {
+    display: flex;
     flex-direction: column;
-    color:black;
-    height: 50vh;
+    justify-content: space-between;
+    height: auto;
+
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    padding: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .card h1{
+    text-align: center;
+  }
+  .inputsP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
 
     width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .inputsT {
+    display: flex;
+    flex-direction: column;
+    color:black;
+    margin:10px;
+    height: auto;
+    width:auto;
 
+  }
+ .name, .tell, .help, .email{
+  margin:10px;
+  width: 15rem;
+  height: 3rem;
+ } 
+ .message{
+  margin:10px;
+  width: 97%;
+  height: 4rem;
+ }
+  .submit-btn {
+    margin-top: 6rem;
+  }
+  /* Dispositivos pequenos (celulares em modo retrato e menores) */
+@media (max-width: 600px) {
+  .inputsP {
+    flex-direction: column;
+  }
 }
-#map {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-  height: 30vh;
-  width: 100%;
-  border:4px solid black;
-  border-radius: 20px;
+/* Dispositivos médios (celulares em modo paisagem e tablets em modo retrato) */
+@media (min-width: 601px) and (max-width: 768px) {
+  .inputsP {
+    flex-direction: column;
+  }
 }
-</style>
+
+/* Dispositivos médios a grandes (tablets em modo paisagem e pequenos desktops) */
+@media (min-width: 769px) and (max-width: 1024px) {
+}
+
+/* Dispositivos grandes (laptops e desktops) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+}
+
+/* Dispositivos extragrandes (desktops grandes) */
+@media (min-width: 1201px) {
+}
+  </style>
+  

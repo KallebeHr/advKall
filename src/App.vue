@@ -1,12 +1,14 @@
 <template>
   <v-app>
-    <v-main class="teste">
+    <v-main >
       <NavBar />
       <Home />
       <SobreNos />
       <atuacao />
       <artigos />
       <contatos />
+      <local />
+      <foot />
     </v-main>
   </v-app>
 </template>
@@ -17,8 +19,4 @@
 </script>
 
 <style scoped>
-  .teste{
-  width:100%;
-
-  }
 </style>
