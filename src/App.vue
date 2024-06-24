@@ -1,22 +1,23 @@
 <template>
   <v-app>
-    <v-main >
-      <NavBar />
+    <preloader/>
+    <NavBar />
+    <v-main>
       <Home />
-      <SobreNos />
-      <atuacao />
-      <artigos />
-      <contatos />
-      <local />
-      <foot />
+       <SobreNos />
+       <Atuacao /> 
+       <Artigos /> 
+       <Contatos />
+       <Local /> 
+       <Foot /> 
     </v-main>
   </v-app>
 </template>
 
 <script setup>
-  //
 
 </script>
 
 <style scoped>
+
 </style>

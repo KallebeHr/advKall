@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" id="home">
     <div class="inicio">
       <div class="inicio-text">
         <h1>LogoName</h1>
@@ -64,6 +64,7 @@ body {
   background: url('/public/IMG/Brown.png');
   background-size: cover;
   padding: 10px;
+  margin-top:5rem;
 }
 
 .inicio {
@@ -83,7 +84,7 @@ body {
 }
 
 .inicio-text {
-  margin-top: 5rem;
+  margin-top: 7.5rem;
   width: 40%;
 }
 

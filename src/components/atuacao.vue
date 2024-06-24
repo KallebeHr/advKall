@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" id="atuacao">
     <div class="titulo">
       <div class="line1"></div>
       <div class="name"><p>Áreas de atuação</p></div>

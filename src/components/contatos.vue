@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container" id="contatos">
       <div class="card">
         <h1>Estamos disponíveis para ajudar.</h1>
   

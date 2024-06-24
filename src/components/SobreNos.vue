@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" id="sobrenos">
     <div class="container-text">
       <div class="titulo">
         <h1 class="titulo-h1">Princípios</h1>
@@ -146,6 +146,7 @@ export default {
     transform: translateX(20px);
     transition: opacity 0.5s ease-out, transform .5s ease-out;
   margin:10px;
+  text-align: center;
 
 }
 .text-p.show{

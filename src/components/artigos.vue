@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" id="artigos">
     <div class="titulo">
       <SvgIcon class="icon" type="mdi" :path="mdiInstagram" />
       <h1>@Kallebehr</h1>
@@ -7,7 +7,7 @@
     <div class="carr">
       <swiper
         :modules="modules"
-        :slidesPerView="isMobile ? 1.4 : 2.2"
+        :slidesPerView="isMobile ? 1.2 : 2.2"
         :centeredSlides="true"
         :navigation="true"
         class="mySwiper"
