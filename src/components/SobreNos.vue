@@ -3,7 +3,7 @@
     <div class="container-text">
       <div class="titulo">
         <h1 class="titulo-h1">Princípios</h1>
-        <div class="linha">.</div>
+        <div class="linha"></div>
       </div>
       <div class="texto">
         <p class="text-p">Pautamos nossas atividades pela ética e lealdade. Cientes de que a diversidade e a equidade são indispensáveis para a longevidade saudável da sociedade, respeitamos e valorizamos as posições e princípios morais de todos. Primamos pelo exercício reto e probo da Advocacia, com competência profissional, eficiência, agilidade e polidez no trato com nossos clientes e parceiros.
