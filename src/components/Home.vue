@@ -2,7 +2,7 @@
   <div class="container" id="home">
     <div class="inicio">
       <div class="inicio-text">
-        <h1>LogoName</h1>
+        <h1>DudaCorna</h1>
         <p>Advocacia</p>
         <span>Contratos de lotação, de distribuição e de franquias Direito Empresarial e Direito Trabalhista</span>
       </div>

@@ -1,7 +1,7 @@
 <template>
   <header :class="{ hidden: hidden }" class="navbar">
     <div class="t">
-      <h1>LogoName</h1>
+      <h1>DudaCorna</h1>
       <nav>
         <ul v-if="!isMobile">
           <li @click="handleClick('#home')">Home</li>
