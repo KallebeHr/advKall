@@ -1,38 +1,34 @@
 <template>
-  <div class="body" v-if="!isloaded">
+  <div class="body" v-if="!isLoaded">
     <div class="loading-container">
-  <div class="loading-text">
-    <span>C</span>
-    <span>A</span>
-    <span>R</span>
-    <span>R</span>
-    <span>E</span>
-    <span>G</span>
-    <span>A</span>
-    <span>N</span>
-    <span>D</span>
-    <span>O</span>
-  </div>
-   
-</div>
+      <div class="loading-text">
+        <span>C</span>
+        <span>A</span>
+        <span>R</span>
+        <span>R</span>
+        <span>E</span>
+        <span>G</span>
+        <span>A</span>
+        <span>N</span>
+        <span>D</span>
+        <span>O</span>
+      </div>
+    </div>
   </div>
 </template>
 
-<script>
-export default {
-    data: () => {
-      return {
-        isloaded: false
-      }
-    },
-    mounted() {
-      document.onreadystatechange = () => {
-        if (document.readyState == "complete") { 
-          this.isloaded = true;
-        } 
-      }
-    },
-  }
+<script setup>
+import { ref, onMounted } from 'vue';
+
+const isLoaded = ref(false);
+
+onMounted(() => {
+  document.onreadystatechange = () => {
+    if (document.readyState === "complete") {
+      isLoaded.value = true;
+    }
+  };
+});
 </script>
 
 <style scoped>
