@@ -64,7 +64,6 @@ body {
   background: url('/public/IMG/Brown.png');
   background-size: cover;
   padding: 10px;
-  margin-top:5rem;
 }
 
 .inicio {
@@ -77,6 +76,7 @@ body {
   opacity: 0;
   transform: translateY(-50px);
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  margin-top:5rem;
 }
 .inicio.show {
   opacity: 1;
@@ -165,7 +165,6 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 0;
   }
 
   .inicio-text {
@@ -189,7 +188,6 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 0;
   }
 
   .inicio-text {
