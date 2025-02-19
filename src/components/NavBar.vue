@@ -1,7 +1,7 @@
 <template>
   <header :class="{ hidden: hidden }" class="navbar">
     <div class="t">
-      <h1>LogoName</h1>
+      <img src="../assets/logocente.png" alt="" class="logo">
       <nav>
         <ul v-if="!isMobile">
           <li @click="handleClick('#home')">Home</li>
@@ -125,7 +125,9 @@ header {
   z-index: 1000;
   transition: top 0.6s ease-in-out;
 }
-
+.logo{
+  height: 4.5rem;
+}
 header h1 {
   margin: 10px;
   font-size: 2rem;
