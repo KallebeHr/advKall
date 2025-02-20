@@ -2,7 +2,7 @@
   <div class="container" id="artigos">
     <div class="titulo">
       <SvgIcon class="icon" type="mdi" :path="mdiInstagram" />
-      <h1>@Kallebehr</h1>
+      <h1>@Maxdev_</h1>
     </div>
     <div class="carr">
       <swiper

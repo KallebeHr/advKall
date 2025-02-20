@@ -34,10 +34,10 @@
     <div class="headerAbout">
       <div class="headerAbout-p">
         <p>
-          <SvgIcon type="mdi" :path="mdiPhone" /> 86 9 8163-2626
+          <SvgIcon type="mdi" :path="mdiPhone" /> 12 3 4567-8910
         </p>
         <p>
-          <SvgIcon type="mdi" :path="mdiEmailOutline " /> Kalebeheuler@gmail.com
+          <SvgIcon type="mdi" :path="mdiEmailOutline " /> maxdev@gmail.com
         </p>
         <p>
           <SvgIcon type="mdi" :path="mdiClockTimeEightOutline " /> Seg - Sex 8h30-18h00
